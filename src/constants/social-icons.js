@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaFacebook, FaTwitterSquare, FaSquarespace } from 'react-icons/fa'
+import { FaFacebook, FaTwitterSquare, FaInstagram } from 'react-icons/fa'
 
 
 export default [
@@ -15,7 +15,7 @@ export default [
 },
 
 { 
- icon: <FaSquarespace />,
+ icon: <FaInstagram />,
  url: 'https://twitter.com',
 },
 
