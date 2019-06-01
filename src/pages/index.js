@@ -1,13 +1,13 @@
 import React from "react"
 //import { Link } from "gatsby"  replaced with AniLink
 import AniLink from "gatsby-plugin-transition-link/AniLink";
-
 import Layout from "../components/layout"
 import Banner from '../components/banner'
 import About from '../components/home/about'
 import Services from '../components/home/services'
 import StyledHero from "../components/styledHero"
 import { graphql } from 'gatsby'
+import FeaturedTours from '../components/home/featuredTours'
 
 export default ( {data} ) => (
   <Layout>
@@ -21,6 +21,8 @@ export default ( {data} ) => (
         
     <About />
     <Services />
+    <FeaturedTours />
+   
   </Layout>
 )
  export const query = graphql`

@@ -36,6 +36,7 @@
 .link:hover {
   background: var(--mainWhite);
   color: var(--primaryColor);
+  
 }
 .img-container:hover .link {
   opacity: 1;
