@@ -4,9 +4,9 @@ import Tour from './tour'
 import Title from '../title'
 
 export default class TourList extends Component {
-  state = {
+  state = { //different than featureTours to do **filtering** use PROPS
    tours: [],
-   sortedTours: [],
+   sortedTours: []
   }
 
    componentDidMount() {

@@ -4,6 +4,8 @@ import styles from '../../css/tour.module.css'
 import { FaMap } from 'react-icons/fa'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
+import PropTypes from 'prop-types'
+//import {useStaticQuery, graphql} from 'gatsby'
 
 const Tour = ({ tour }) => {
   const { name, price, country, days, slug, images } = tour 
@@ -28,14 +30,25 @@ const Tour = ({ tour }) => {
    </h4>
     <div className={styles.detail}>
      <h6>{days}days</h6>
+     {days  || "default days"}
      <h6>from ${price}</h6>
+
     </div>
    </div>
-
   </div>
-
   </article>
  )
+}
+
+Tour.propTypes = {  //gives warning on missing data
+  tour: PropTypes.shape({
+    name:PropTypes.string.isRequired, 
+    country:PropTypes.string.isRequired,
+    price:PropTypes.number.isRequired,  
+    days:PropTypes.number.isRequired, 
+    images:PropTypes.arrayOf(PropTypes.object).isRequired, 
+
+  }),
 }
 //slug = single page for each tour
 export default Tour
