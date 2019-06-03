@@ -3,12 +3,12 @@ import Tour from '../tours/tour'
 import { useStaticQuery, graphql } from 'gatsby'
 import Title from '../title'
 import styles from '../../css/items.module.css'
-import AniLink from "gatsby-plugin-transition-link/AniLink";
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 
 const getTours = graphql`
 query {
-  featuredTours:allContentfulTours(filter:{featured:{eq:true}}){
+  featuredTours: allContentfulTour(filter: { featured: { eq:true } }) {
     edges {
       node {
         name
@@ -20,7 +20,7 @@ query {
         images {
           fluid {
             # src **--replace with fragment
-            ...GatsbyContentfulFluid_tracedSVG
+            ...GatsbyContentfulFluid
           }
         }
       }
