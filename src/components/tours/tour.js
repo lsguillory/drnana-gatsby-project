@@ -29,8 +29,8 @@ const Tour = ({ tour }) => {
        {country  || "default country"}
    </h4>
     <div className={styles.detail}>
-     <h6>{days}days</h6>
-     {days  || "default days"}
+     <h6>{days  || 'default days'}days</h6>
+     
      <h6>from ${price}</h6>
 
     </div>
